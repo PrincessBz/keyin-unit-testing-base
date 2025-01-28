@@ -1,15 +1,20 @@
 function factorial(number) {
-    if (number === 0) {
-        return 1;
-    }
-
-    if (number < 0) {
+    const parsedNumber = parseInt(number);
+    if (isNaN(parsedNumber)) {
         return undefined;
     }
 
-    return number * factorial(number - 1);
+    if (parsedNumber === 0) {
+        return 1;
+    }
+
+    if (parsedNumber < 0) {
+        return undefined;
+    }
+
+    return parsedNumber * factorial(parsedNumber - 1);
 }
 
 module.exports = {
-    factorial,
+    factorial
 };

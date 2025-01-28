@@ -6,8 +6,7 @@
  */
 
 function isPalindrome(text) {
-    const cleanedText = text.toLowerCase().replace(/\W/g, '');
-    return cleanedText === cleanedText.split('').reverse().join('');
+    
 }
 
 module.exports = {
